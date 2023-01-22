@@ -1,0 +1,14 @@
+labels:
+  backend: lxc
+
+variables:
+  - &when_path
+      - ".woodpecker/lxc.yml"
+      - "pipeline/backend/lxc/**"
+
+pipeline:
+   lxc:
+     image: debian:bullseye
+     commands: pipeline/backend/lxc/tests/run.sh
+     when:
+       path: *when_path

@@ -1,0 +1,8 @@
+clone:
+  git:
+    image: docker.io/woodpeckerci/plugin-git
+
+pipeline:
+   job:
+     image: debian:bullseye
+     commands: pipeline/backend/lxc/tests/lxc.sh
