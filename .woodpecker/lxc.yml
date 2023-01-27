@@ -1,6 +1,3 @@
-labels:
-  backend: lxc
-
 variables:
   - &when_path
       - ".woodpecker/lxc.yml"
